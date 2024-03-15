@@ -81,6 +81,7 @@ variable "public-rt-name" {
 variable "private-rt-name" {
   description = "Name for Private Route table"
 }
+
 variable "launch-template-web-name" {
   description = "Name for Launch-template-1"
 }
@@ -143,4 +144,36 @@ variable "asg-app-name" {
 
 variable "asg-sg-app-name" {
   description = "Name for asg security group 1"
+}
+
+variable "tg-app-name" {
+  description = "Name for Target group app"
+}
+
+variable "db-username" {
+  description = "Username for db instance"
+}
+
+variable "db-password" {
+  description = "Password for db instance"
+}
+
+variable "db-name" {
+  description = "Name for Database"
+}
+
+variable "instance-class" {
+  description = "Value for DB instance class"
+}
+
+variable "db-sg-name" {
+  description = "Name for DB Security group"
+}
+
+variable "db-subnet-grp-name" {
+  description = "Name for DB Subnet Group"
+}
+
+variable "app-db-sg-name" {
+  description = "Name for App-DB SEcurity group"
 }
