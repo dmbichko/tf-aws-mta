@@ -2,7 +2,7 @@ resource "aws_launch_template" "template-web" {
   name          = var.launch-template-web-name
   image_id      = var.image-id
   instance_type = var.instance-type
-  key_name      = var.key-name
+  key_name      = aws_key_pair.instance_key.key-name
 
   network_interfaces {
     device_index    = 0

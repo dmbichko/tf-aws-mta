@@ -6,8 +6,11 @@ resource "aws_lb_target_group" "target-group-app" {
   health_check {
     path    = "/"
     matcher = 200
-
   }
+  provisioner "local-exec" {
+    on_failure = continue
+    command = "Manage it"
+}
 }
 
 resource "aws_lb_listener" "alb_listener-app" {
